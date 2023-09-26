@@ -1,0 +1,26 @@
+<div class="container py-5">
+    <h3 class="text-center text-uppercase">List of Users</h3>
+    <table class="table table-bordered table-striped" border="1" style="width: max-content; text-align: center;">
+        <thead>
+            <tr class="text-center text-uppercase">
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>gender</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of user; index as i">
+                <td>{{emp.id}}</td>
+                <td>{{emp.firstName}}</td>
+                <td>{{emp.lastName}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.password}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

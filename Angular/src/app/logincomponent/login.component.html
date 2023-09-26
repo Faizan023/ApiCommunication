@@ -1,0 +1,38 @@
+<form [formGroup]="validation">
+
+    <label for="firstname">FirstName</label>
+    <input type="text" name="firstname" formControlName="firstName">
+    <small class="error" *ngIf="validation.controls['firstName'].errors?.['required']"> FirstName Is
+        Required</small><br> <br>
+    <label for="lastname">LastName</label>
+    <input type="text" name="lastname" formControlName="lastName">
+    <small class="error" *ngIf="validation.controls['lastName'].errors?.['required']">LastName Is
+        Required</small><br><br>
+    
+    <label for="gender">Gender</label>
+    <input type="text" name="gender" formControlName="gender" autocomplete="on">
+    <small class="error" *ngIf="validation.controls['gender'].errors?.['required']"> Gender Is Required
+    </small><br> <br>
+
+    <label for="email">Email</label>
+    <input type="text" name="email" formControlName="email">
+    <small class="error" *ngIf="validation.controls['email'].errors?.['required']"> Email Is Required</small><br>
+    <!-- <label for='number'>Number</label>
+    <input type="number" name="number" formControlName="number">
+    <small class="error" *ngIf="validation.controls['number'].errors?.['required']">Phone Number Required</small><br>
+    <small class="error" *ngIf="validation.controls['number'].errors?.['pattern']">Number Must Be in Character</small> -->
+    <br>
+    <label for="password">PassWord</label>
+    <input type="text" name="password" formControlName="password">
+    <small class="error" *ngIf="validation.controls['password'].errors?.['required']"> password IS Required</small>
+    <small class="error" *ngIf="validation.controls['password'].errors?.['pattern']">
+        <li> Use Special Characters </li>
+        <li>Use Numbers</li>
+        <li>Use Loweecase & UpperCase Letter</li>
+        <li> PassWord Must Be 8-15 Character </li>
+    </small>
+    <button type="submit" (click)="Onsubmit()">Submit</button>
+    <!-- <p>Have Already Account? <a class="login" routerLink="../login">Login </a> </p> -->
+    <p> {{displymsg}} </p>
+</form>
+<button type="button" routerLink="/list">Check list</button>

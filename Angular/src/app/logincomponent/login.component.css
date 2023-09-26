@@ -1,0 +1,33 @@
+form {
+    border: 2px solid black;
+    width: 200px;
+    padding: 100px;
+    margin-left: 570px;
+    margin-top: 130px;
+}
+
+button {
+    margin: 30px 60px;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+
+}
+
+.login {
+    color: blue;
+}
+.checkbox2{
+    margin-left: 40px;
+}
